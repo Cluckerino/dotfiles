@@ -18,7 +18,8 @@ then
   then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
   fi
-
+else
+  echo "  Hombrew found, skipping install"
 fi
 
 exit 0
