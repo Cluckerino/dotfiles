@@ -1,43 +1,30 @@
 cask_args appdir: '/Applications'
 
-tap 'homebrew/bundle'
-tap 'puma/puma'
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+tap "sambadevi/powerlevel9k"
 
-brew 'ack'
-brew 'coreutils'
-brew 'go'
-brew 'grc'
-brew 'imagemagick'
-brew 'jp2a'
-brew 'jq'
-brew 'libcaca', args: ['with-imlib2']
-brew 'libgit2'
-brew 'openssl'
-brew 'node'
-brew 'readline'
-brew 'postgresql'
-brew 'puma/puma/puma-dev'
-brew 'ruby-build'
-brew 'rbenv'
-brew 'roundup'
-brew 'spaceman-diff'
-brew 'spark'
-brew 'unrar'
-brew 'wget'
-brew 'yarn'
-brew 'youtube-dl'
+brew "cmake"
+brew "mono", link: false
+brew "python"
+brew "zsh"
+brew "zsh-autosuggestions"
+brew "zsh-syntax-highlighting"
+brew "sambadevi/powerlevel9k/powerlevel9k"
 
-cask '1password'
-cask 'adium'
-cask 'atom'
-cask 'firefox'
-cask 'garmin-express'
-cask 'google-chrome'
-cask 'handbrake'
-cask 'mapbox-studio'
-cask 'seashore'
-cask 'slack'
-cask 'steam'
-cask 'transmission'
-cask 'tunnelbear'
-cask 'vlc'
+cask "adobe-acrobat-reader"
+cask "docker"
+cask "dotnet-sdk"
+cask "dropbox"
+cask "firefox"
+cask "font-hack-nerd-font"
+cask "gimp"
+cask "google-chrome"
+cask "iterm2"
+cask "mono-mdk"
+cask "spotify"
+cask "visual-studio"
+cask "visual-studio-code"
+cask "vlc"
