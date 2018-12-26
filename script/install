@@ -1,14 +1,30 @@
 #!/usr/bin/env bash
 #
-# Run all dotfiles installers.
-
+# Runs the installer for homebrew and topic folders.
+#
 set -e
 
-cd "$(dirname $0)"/..
+cd "$(dirname "$0")/.."
+DOTFILES_ROOT=$(pwd -P)
+
+echo "Running Install Scripts"
+
+# Install homebrew
+echo "Installing Homebrew"
+$DOTFILES_ROOT/homebrew/install.sh 2>&1
+
+# Upgrade homebrew
+echo "› brew update"
+brew update
+
+cd $DOTFILES_ROOT
 
 # Run Homebrew through the Brewfile
 echo "› brew bundle"
 brew bundle
 
 # find the installers and run them iteratively
-find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
+find . -name install.sh | while read installer ; do \
+    echo "› sh -c "${installer}"" \
+    sh -c "${installer}" ; \
+done
