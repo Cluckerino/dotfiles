@@ -68,12 +68,13 @@ export ZSH="$HOME/.oh-my-zsh"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
-  gitfast
-  git-extras
   docker
-  vscode
+  git
+  git-extras
+  gitfast
+  pip
   python
+  vscode
 )
 
 source $ZSH/oh-my-zsh.sh
