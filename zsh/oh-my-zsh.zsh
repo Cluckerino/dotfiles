@@ -72,6 +72,7 @@ plugins=(
   git
   git-extras
   gitfast
+  golang
   pip
   python
   vscode
