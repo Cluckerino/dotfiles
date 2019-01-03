@@ -7,6 +7,7 @@ tap "homebrew/core"
 tap "sambadevi/powerlevel9k"
 
 brew "cmake"
+brew "go"
 brew "mono", link: false
 brew "python"
 brew "zsh"
