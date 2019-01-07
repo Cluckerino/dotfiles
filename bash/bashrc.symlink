@@ -1,19 +1,34 @@
+# Enable "autopushd" by replacing cd
+# See http://unix.stackexchange.com/a/4291
+cd()
+{
+  if [ $# -eq 0 ]; then
+    DIR="${HOME}"
+  else
+    DIR="$1"
+  fi
+
+  builtin pushd "${DIR}" > /dev/null
+}
+
+alias reload='source ~/.bashrc'
 
 # Aliases
-alias -='cd -'
-alias ...=../..
-alias ....=../../..
-alias .....=../../../..
-alias ......=../../../../..
+alias -- -='cd -'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
 alias 1='cd -'
-alias 2='cd -2'
-alias 3='cd -3'
-alias 4='cd -4'
-alias 5='cd -5'
-alias 6='cd -6'
-alias 7='cd -7'
-alias 8='cd -8'
-alias 9='cd -9'
+alias 2='cd +2'
+alias 3='cd +3'
+alias 4='cd +4'
+alias 5='cd +5'
+alias 6='cd +6'
+alias 7='cd +7'
+alias 8='cd +8'
+alias 9='cd +9'
 alias _=sudo
 alias afind='ack -il'
 alias d='dirs -v | head -10'
@@ -26,7 +41,7 @@ alias md='mkdir -p'
 alias rd=rmdir
 
 # get current branch in git repo
-function parse_git_branch() {
+parse_git_branch() {
     BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
     if [ ! "${BRANCH}" == "" ]
     then
@@ -38,7 +53,7 @@ function parse_git_branch() {
 }
 
 # get current status of git repo
-function parse_git_dirty {
+parse_git_dirty () {
     status=`git status 2>&1 | tee`
     dirty=`echo -n "${status}" 2> /dev/null | grep "modified:" &> /dev/null; echo "$?"`
     untracked=`echo -n "${status}" 2> /dev/null | grep "Untracked files" &> /dev/null; echo "$?"`
@@ -73,7 +88,7 @@ function parse_git_dirty {
 }
 
 # green if clean, yellow if dirty
-function git_status_color {
+git_status_color() {
     bits=`parse_git_dirty`
     if [ "${bits}" == "" ]; then
         echo "30;42m"
