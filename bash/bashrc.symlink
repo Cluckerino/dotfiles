@@ -97,4 +97,7 @@ git_status_color() {
     fi
 }
 
-export PS1="\[\e[33m\]\u\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[33m\]\h\[\e[m\] \[\e[30;44m\] \w \[\e[m\] \[\e[`git_status_color`\] \`parse_git_branch\` \[\e[m\]\n\[\e[30;47m\] \\$ \[\e[m\] "
+ps1_user_host='\[\e[33m\]\u@\h\[\e[m\]'
+ps1_dir='\[\e[30;44m\] \w \[\e[m\]'
+ps1_git="\[\e[`git_status_color`\] \`parse_git_branch\` \[\e[m\]"
+export PS1="\n$ps1_user_host $ps1_dir $ps1_git\n\\$ "
