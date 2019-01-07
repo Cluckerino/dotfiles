@@ -16,6 +16,7 @@ brew "zsh-syntax-highlighting"
 brew "sambadevi/powerlevel9k/powerlevel9k"
 
 cask "adobe-acrobat-reader"
+cask "cyberduck"
 cask "docker"
 cask "dotnet-sdk"
 cask "dropbox"
