@@ -1,6 +1,6 @@
 # Hey look, dotfiles
 
-I'm following [Zach Holman's](https://github.com/holman) 
+I'm following [Zach Holman's](https://github.com/holman)
 [advice](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
 
 This is intended to be more than just setting up a shell environment; the `Brewfile`
@@ -28,6 +28,8 @@ There's a few special files in the hierarchy.
 - **topic/\*.zsh**: Any files ending in `.zsh` get loaded into your environment.
 - **topic/path.zsh**: Any file named `path.zsh` is loaded first and is expected to setup `$PATH` or similar.
 - **topic/completion.zsh**: Any file named `completion.zsh` is loaded last and is expected to setup autocomplete.
+- **topic/\*.bash**: Similar to `.zsh` files, but for bash.
+- **topic/path.bash**: Similar to `path.zsh` files; these get loaded to bash first.
 - **topic/install.sh**: Any file named `install.sh` is executed when you run `script/run_install_scripts.sh`. To avoid being loaded automatically, its extension is `.sh`, not `.zsh`.
 - **topic/\*.symlink**: Any file ending in `*.symlink` gets symlinked into
   your `$HOME`. This is so you can keep all of those versioned in your dotfiles
@@ -53,6 +55,7 @@ which sets up a few paths that'll be different on your particular machine.
 ### Install deets
 
 The order of scripts are as follows:
+
 1. `script/bootstrap`
     1. Symlink `*topic*/*.symlink`:
 2. `script/install`
