@@ -22,6 +22,9 @@ set hlsearch            " highlight matches
 set tabstop=4
 set expandtab
 
+" Use filetype plugins
+filetype plugin on
+
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
   set mouse=a
