@@ -1,6 +1,7 @@
 # Local/private config goes in the include
 [core]
         pager = cat
+        excludesfile = ~/.gitexcludes
 [include]
         path = ~/.gitconfig.local
 [hub]
