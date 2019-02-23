@@ -10,7 +10,23 @@ then
   source ~/.localrc
 fi
 
-# all of our zsh files
+# Stash zsh specific scripts in the ~/.zshrc.d directory. This follows the same
+# logic as above, but is more specific to zsh. This allows other shells to take
+# advantage of ~/.localrc.
+# Files that need to be loaded first should have a prefix of "pre-" (files
+# should have the form "pre-*.zsh"). Everything else gets loaded at the end.
+
+# all of the local zsh files from the ~/.zshrc.d directory.
+local_config_files=($HOME/.zshrc.d/*.zsh)
+
+# Load local zshrc stuff appended with "pre-".
+# These need to load before my scripts (especially oh-my-zsh)
+for file in ${(M)local_config_files:#*/pre-*.zsh}
+do
+  source $file
+done
+
+# all of our zsh files in topic areas
 typeset -U config_files
 config_files=($DOTFILES_ROOT/**/*.zsh)
 
@@ -37,3 +53,10 @@ do
 done
 
 unset config_files
+
+# Load local zshrc stuff not appended with pre.
+# These need to load after my scripts
+for file in ${local_config_files:#*/pre-*.zsh}
+do
+  source $file
+done
