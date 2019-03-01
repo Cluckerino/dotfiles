@@ -10,6 +10,8 @@ brew "cmake"
 brew "go"
 brew "mono", link: false
 brew "python"
+brew "tmux"
+brew "tmux-mem-cpu-load"
 brew "zsh"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"

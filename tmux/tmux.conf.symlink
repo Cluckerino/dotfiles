@@ -1,0 +1,14 @@
+# Hey look, tmux settings!!!!
+
+# The ever popular remap prefix from 'C-b' to 'C-a'
+unbind C-b
+set-option -g prefix C-a
+bind-key C-a send-prefix
+
+# Start window numbering at 1
+set -g base-index 1
+
+# Use the tmux-mem-cpu-load plugin
+set -g status-interval 2
+set -g status-left "#S #[fg=green,bg=black]#(tmux-mem-cpu-load --colors --interval 2)#[default]"
+set -g status-left-length 60

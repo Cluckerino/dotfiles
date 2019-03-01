@@ -77,6 +77,7 @@ plugins=(
   ruby
   pip
   python
+  tmux
   vscode
 )
 
