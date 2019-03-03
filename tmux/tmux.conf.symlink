@@ -8,6 +8,9 @@ bind-key C-a send-prefix
 # Start window numbering at 1
 set -g base-index 1
 
+# Enable mouse because that's real grand
+setw -g mouse on
+
 # Use tmux-mem-cpu-load: https://github.com/tmux-plugins/tmux-sensible
 set -g @plugin 'tmux-plugins/tmux-mem-cpu-load'
 
