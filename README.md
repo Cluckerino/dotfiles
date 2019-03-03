@@ -36,6 +36,14 @@ There's a few special files in the hierarchy.
   but still keep those autoloaded files in your home directory. These get
   symlinked in when you run `script/bootstrap.sh`.
 
+In addition, the script allows for local settings to be stored in special files/directories.
+
+- **$HOME/.localrc**: This is an rc file that will be consumed by `zsh`/`bash` that contains local settings/variables.
+- **$HOME/.zshrc.d**: Create this directory for a more customized/origanized repo of local `zsh` settings.
+  - **$HOME/.zshrc.d/pre-\*.zsh**: These are consumed first when going through the `.zshrc.d` directory. Use this to configure zsh-specific
+local functions/variables before consuming the remaining `.zsh` scripts from this directory and the `.zsh` scripts from the repo.
+  - **$HOME/.zshrc.d/\*.zsh not beginning with pre-**: These local settings are loaded last.
+
 ## To install
 
 Run this:
