@@ -5,7 +5,6 @@
 
 # Using nerdfont - should be installed by Homebrew
 POWERLEVEL9K_MODE='nerdfont-complete'
-source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time pyenv virtualenv anaconda nodeenv)
