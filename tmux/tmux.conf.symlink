@@ -8,7 +8,15 @@ bind-key C-a send-prefix
 # Start window numbering at 1
 set -g base-index 1
 
-# Use the tmux-mem-cpu-load plugin
-set -g status-interval 2
-set -g status-left "#S #[fg=green,bg=black]#(tmux-mem-cpu-load --colors --interval 2)#[default]"
-set -g status-left-length 60
+# Use tmux-mem-cpu-load: https://github.com/tmux-plugins/tmux-sensible
+set -g @plugin 'tmux-plugins/tmux-mem-cpu-load'
+
+# Use tmux-sensible: https://github.com/tmux-plugins/tmux-sensible
+set -g @plugin 'tmux-plugins/tmux-sensible'
+
+# Use tmux-pain-control: https://github.com/tmux-plugins/tmux-pain-control
+set -g @plugin 'tmux-plugins/tmux-pain-control'
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run -b '~/.tmux/plugins/tpm/tpm'
+
