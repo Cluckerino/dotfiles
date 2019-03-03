@@ -3,6 +3,10 @@
 # oh-my-zsh options
 #
 
+# Load P9k vars before setting up oh-my-zsh
+export DOTFILES_ROOT=$HOME/.dotfiles
+source $DOTFILES_ROOT/zsh/powerlevel9kvars
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
