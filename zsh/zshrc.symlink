@@ -17,7 +17,12 @@ fi
 # should have the form "pre-*.zsh"). Everything else gets loaded at the end.
 
 # all of the local zsh files from the ~/.zshrc.d directory.
-local_config_files=($HOME/.zshrc.d/*.zsh)
+if [ -d $HOME/.zshrc.d ]
+then
+  local_config_files=($HOME/.zshrc.d/*.zsh)
+else
+  local_config_files=""
+fi
 
 # Load local zshrc stuff appended with "pre-".
 # These need to load before my scripts (especially oh-my-zsh)
