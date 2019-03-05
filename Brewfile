@@ -10,6 +10,7 @@ brew "go"
 brew "mono", link: false
 brew "python"
 brew "tmux"
+brew "tree"
 brew "zsh"
 
 cask "adobe-acrobat-reader"
