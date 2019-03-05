@@ -4,18 +4,13 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
-tap "sambadevi/powerlevel9k"
 
 brew "cmake"
 brew "go"
 brew "mono", link: false
 brew "python"
 brew "tmux"
-brew "tmux-mem-cpu-load"
 brew "zsh"
-brew "zsh-autosuggestions"
-brew "zsh-syntax-highlighting"
-brew "sambadevi/powerlevel9k/powerlevel9k"
 
 cask "adobe-acrobat-reader"
 cask "cyberduck"
