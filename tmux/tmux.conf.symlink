@@ -29,6 +29,9 @@ set -g @plugin 'tmux-plugins/tmux-pain-control'
 # Use tmux-yank: https://github.com/tmux-plugins/tmux-yank
 set -g @plugin 'tmux-plugins/tmux-yank'
 
+# Use tmux-copycat: https://github.com/tmux-plugins/tmux-copycat
+set -g @plugin 'tmux-plugins/tmux-copycat'
+
 # Use the fancy vim-aware pane navigator: https://github.com/christoomey/vim-tmux-navigator
 set -g @plugin 'christoomey/vim-tmux-navigator'
 
