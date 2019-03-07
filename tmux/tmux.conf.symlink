@@ -29,6 +29,9 @@ set -g @plugin 'tmux-plugins/tmux-pain-control'
 # Use tmux-yank: https://github.com/tmux-plugins/tmux-yank
 set -g @plugin 'tmux-plugins/tmux-yank'
 
+# Use the fancy vim-aware pane navigator: https://github.com/christoomey/vim-tmux-navigator
+set -g @plugin 'christoomey/vim-tmux-navigator'
+
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run -b '~/.tmux/plugins/tpm/tpm'
 
