@@ -26,6 +26,9 @@ set -g @plugin 'tmux-plugins/tmux-sensible'
 # Use tmux-pain-control: https://github.com/tmux-plugins/tmux-pain-control
 set -g @plugin 'tmux-plugins/tmux-pain-control'
 
+# Use tmux-yank: https://github.com/tmux-plugins/tmux-yank
+set -g @plugin 'tmux-plugins/tmux-yank'
+
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run -b '~/.tmux/plugins/tpm/tpm'
 
