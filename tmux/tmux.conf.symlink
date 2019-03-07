@@ -14,8 +14,8 @@ setw -g mouse on
 # VERY IMPORTANT - Use tmux-resurrect: https://github.com/tmux-plugins/tmux-resurrect
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 
-# Use tmux-mem-cpu-load: https://github.com/tmux-plugins/tmux-sensible
-set -g @plugin 'tmux-plugins/tmux-mem-cpu-load'
+# Use tmux-mem-cpu-load: https://github.com/thewtex/tmux-mem-cpu-load
+set -g @plugin 'thewtex/tmux-mem-cpu-load'
 
 # Use tmux-sensible: https://github.com/tmux-plugins/tmux-sensible
 set -g @plugin 'tmux-plugins/tmux-sensible'
