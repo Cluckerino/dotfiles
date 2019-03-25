@@ -10,6 +10,8 @@ set -g base-index 1
 
 # Enable mouse because that's real grand
 setw -g mouse on
+# Prefix + C-m just in case you want to toggle mousearino
+bind-key C-m set-window-option mouse\; display-message "mouse mode is now #{?mouse,on,off}"
 
 # Enable vi mode in copy mode
 set-window-option -g mode-keys vi
