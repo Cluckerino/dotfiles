@@ -14,7 +14,7 @@ setw -g mouse on
 bind-key C-m set-window-option mouse\; display-message "mouse mode is now #{?mouse,on,off}"
 
 # Enable vi mode in copy mode
-set-window-option -g mode-keys vi
+setw -g mode-keys vi
 
 # Actually use tpm?: https://github.com/tmux-plugins/tpm
 set -g @plugin 'tmux-plugins/tpm'
