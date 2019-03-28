@@ -40,6 +40,12 @@ set -g @plugin 'tmux-plugins/tmux-copycat'
 # Use the fancy vim-aware pane navigator: https://github.com/christoomey/vim-tmux-navigator
 set -g @plugin 'christoomey/vim-tmux-navigator'
 
+# Use tmux themes: https://github.com/jimeh/tmux-themepack
+set -g @plugin 'jimeh/tmux-themepack'
+
+# Use this tmux theme
+set -g @themepack 'powerline/block/yellow'
+
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run -b '~/.tmux/plugins/tpm/tpm'
 
