@@ -6,9 +6,12 @@ tap "homebrew/cask-fonts"
 tap "homebrew/core"
 
 brew "cmake"
+brew "csvkit"
 brew "go"
+brew "jq"
 brew "mono", link: false
 brew "python"
+brew "ruby"
 brew "tmux"
 brew "tree"
 brew "zsh"
