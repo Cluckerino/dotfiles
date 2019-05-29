@@ -24,6 +24,12 @@ set -g @plugin 'tmux-plugins/tpm'
 # VERY IMPORTANT - Use tmux-resurrect: https://github.com/tmux-plugins/tmux-resurrect
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 
+# NOT AS IMPORTANT - Use tmux-continuum: https://github.com/tmux-plugins/tmux-continuum
+set -g @plugin 'tmux-plugins/tmux-continuum'
+
+# Actually turn it on
+set -g @continuum-restore 'on'
+
 # Use tmux-sensible: https://github.com/tmux-plugins/tmux-sensible
 set -g @plugin 'tmux-plugins/tmux-sensible'
 
