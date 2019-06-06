@@ -42,9 +42,6 @@ set -g @plugin 'tmux-plugins/tmux-yank'
 # Use tmux-copycat: https://github.com/tmux-plugins/tmux-copycat
 set -g @plugin 'tmux-plugins/tmux-copycat'
 
-# Use the fancy vim-aware pane navigator: https://github.com/christoomey/vim-tmux-navigator
-set -g @plugin 'christoomey/vim-tmux-navigator'
-
 # Use tmux themes: https://github.com/jimeh/tmux-themepack
 set -g @plugin 'jimeh/tmux-themepack'
 
