@@ -78,10 +78,15 @@ plugins=(
   git-extras
   gitfast
   golang
+  node
+  npm
+  rbenv
   ruby
   pip
   python
   tmux
+  virtualenv
+  virtualenvwrapper
   vscode
   zsh-autosuggestions
   zsh-syntax-highlighting
