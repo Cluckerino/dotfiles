@@ -105,6 +105,8 @@
                 "Green Component": "1",
                 "Red Component": "1"
             },
+            "Bound Hosts": [
+            ],
             "Character Encoding": 4,
             "Close Sessions On End": true,
             "Columns": 140,
@@ -131,6 +133,7 @@
             "Default Bookmark": "No",
             "Description": "Default",
             "Disable Window Resizing": true,
+            "Dynamic Profile Filename": "/Users/cluckerino/Library/Application Support/iTerm2/DynamicProfiles/linked_settings.json",
             "Flashing Bell": false,
             "Foreground Color": {
                 "Blue Component": "1",
@@ -138,7 +141,9 @@
                 "Red Component": "1"
             },
             "Guid": "A8B4A96E-53EC-443F-845E-8B7C7101AFFD",
+            "Has Hotkey": false,
             "Horizontal Spacing": 1,
+            "Icon": 1,
             "Idle Code": 0,
             "Jobs to Ignore": [
                 "rlogin",
@@ -291,6 +296,10 @@
                     "Action": 10,
                     "Text": "b"
                 },
+                "0xf702-0x300000": {
+                    "Action": 11,
+                    "Text": "0x01"
+                },
                 "0xf703-0x220000": {
                     "Action": 10,
                     "Text": "[1;2C"
@@ -306,6 +315,10 @@
                 "0xf703-0x280000": {
                     "Action": 10,
                     "Text": "f"
+                },
+                "0xf703-0x300000": {
+                    "Action": 11,
+                    "Text": "0x05"
                 },
                 "0xf704-0x20000": {
                     "Action": 10,
@@ -417,10 +430,119 @@
             },
             "Send Code When Idle": false,
             "Shortcut": "",
+            "Show Status Bar": true,
             "Silence Bell": false,
             "Space": 0,
+            "Status Bar Layout": {
+                "advanced configuration": {
+                    "algorithm": 0,
+                    "font": ".AppleSystemUIFont 12"
+                },
+                "components": [
+                    {
+                        "class": "iTermStatusBarBatteryComponent",
+                        "configuration": {
+                            "knobs": {
+                                "base: compression resistance": 1,
+                                "base: priority": 5,
+                                "shared text color": {
+                                    "Alpha Component": 1,
+                                    "Blue Component": 0.63,
+                                    "Color Space": "sRGB",
+                                    "Green Component": 0.63,
+                                    "Red Component": 0.9
+                                }
+                            },
+                            "layout advanced configuration dictionary value": {
+                                "algorithm": 0,
+                                "font": ".AppleSystemUIFont 12"
+                            }
+                        }
+                    },
+                    {
+                        "class": "iTermStatusBarClockComponent",
+                        "configuration": {
+                            "knobs": {
+                                "base: compression resistance": 1,
+                                "base: priority": 5,
+                                "format": "M/dd h:mm",
+                                "shared text color": {
+                                    "Alpha Component": 1,
+                                    "Blue Component": 0.63,
+                                    "Color Space": "sRGB",
+                                    "Green Component": 0.9,
+                                    "Red Component": 0.846
+                                }
+                            },
+                            "layout advanced configuration dictionary value": {
+                                "algorithm": 0
+                            }
+                        }
+                    },
+                    {
+                        "class": "iTermStatusBarComposerComponent",
+                        "configuration": {
+                            "knobs": {
+                                "base: compression resistance": 1,
+                                "base: priority": 5,
+                                "shared text color": {
+                                    "Alpha Component": 1,
+                                    "Blue Component": 0.7380000000000001,
+                                    "Color Space": "sRGB",
+                                    "Green Component": 0.9,
+                                    "Red Component": 0.63
+                                }
+                            },
+                            "layout advanced configuration dictionary value": {
+                                "algorithm": 0
+                            }
+                        }
+                    },
+                    {
+                        "class": "iTermStatusBarCPUUtilizationComponent",
+                        "configuration": {
+                            "knobs": {
+                                "base: compression resistance": 1,
+                                "base: priority": 5,
+                                "shared text color": {
+                                    "Alpha Component": 1,
+                                    "Blue Component": 0.9,
+                                    "Color Space": "sRGB",
+                                    "Green Component": 0.7379999999999999,
+                                    "Red Component": 0.63
+                                }
+                            },
+                            "layout advanced configuration dictionary value": {
+                                "algorithm": 0,
+                                "font": ".AppleSystemUIFont 12"
+                            }
+                        }
+                    },
+                    {
+                        "class": "iTermStatusBarMemoryUtilizationComponent",
+                        "configuration": {
+                            "knobs": {
+                                "base: compression resistance": 1,
+                                "base: priority": 5,
+                                "shared text color": {
+                                    "Alpha Component": 1,
+                                    "Blue Component": 0.9,
+                                    "Color Space": "sRGB",
+                                    "Green Component": 0.63,
+                                    "Red Component": 0.8460000000000002
+                                }
+                            },
+                            "layout advanced configuration dictionary value": {
+                                "algorithm": 0,
+                                "font": ".AppleSystemUIFont 12"
+                            }
+                        }
+                    }
+                ]
+            },
             "Sync Title": false,
             "Tags": [
+                "Dynamic"
             ],
             "Terminal Type": "xterm-256color",
             "Transparency": 0.18996867068527915,
