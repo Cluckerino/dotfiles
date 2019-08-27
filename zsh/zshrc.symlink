@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 # shortcut to this dotfiles path is $DOTFILES_ROOT
 export DOTFILES_ROOT=$HOME/.dotfiles
+export LOCAL_DOTFILES_ROOT=$HOME/.zshrc.d
 
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
@@ -17,9 +18,9 @@ fi
 # should have the form "pre-*.zsh"). Everything else gets loaded at the end.
 
 # all of the local zsh files from the ~/.zshrc.d directory.
-if [ -d $HOME/.zshrc.d ]
+if [ -d $LOCAL_DOTFILES_ROOT ]
 then
-  local_config_files=($HOME/.zshrc.d/*.zsh)
+  local_config_files=($LOCAL_DOTFILES_ROOT/*.zsh)
 else
   local_config_files=""
 fi

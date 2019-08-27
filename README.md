@@ -25,6 +25,7 @@ There's a few special files in the hierarchy.
 - **Brewfile**: This is a list of applications for [Homebrew](https://brew.sh/) and [Homebrew Cask](https://caskroom.github.io)
  to install. This should install ZSH and all the fancy stuff I use with it, as well as all of the other applications I need to
  get: e.g. Chrome, Visual Studio Code, etc.
+- **bin/**: Anything in `bin/` will get added to your `$PATH` and be made available everywhere.
 - **topic/\*.zsh**: Any files ending in `.zsh` get loaded into your environment.
 - **topic/path.zsh**: Any file named `path.zsh` is loaded first and is expected to setup `$PATH` or similar.
 - **topic/completion.zsh**: Any file named `completion.zsh` is loaded last and is expected to setup autocomplete.
@@ -43,6 +44,7 @@ In addition, the script allows for local settings to be stored in special files/
   - **$HOME/.zshrc.d/pre-\*.zsh**: These are consumed first when going through the `.zshrc.d` directory. Use this to configure zsh-specific
 local functions/variables before consuming the remaining `.zsh` scripts from this directory and the `.zsh` scripts from the repo.
   - **$HOME/.zshrc.d/\*.zsh not beginning with pre-**: These local settings are loaded last.
+  - **$HOME/.zshrc.d/bin/**: Serves the same purpose as the **bin/** above, but for local stuff.
 
 ## To install
 
