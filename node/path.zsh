@@ -2,5 +2,8 @@
 #
 # Setup node environment here
 #
-export NODE_PATH="$(npm root -g):$NODE_PATH"
 
+# Use zsh linking to wrangle paths
+export -T NODE_PATH node_path
+typeset -U node_path
+node_path=("$(npm root -g)" $node_path)

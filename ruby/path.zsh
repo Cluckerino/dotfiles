@@ -4,7 +4,9 @@
 #
 
 RUBY_BREW="/usr/local/opt/ruby"
-export PATH="$RUBY_BREW/bin:$PATH"
+
+# Use zsh $path var to extend the linked $PATH var
+path=("$RUBY_BREW/bin" $path)
 
 export DOTFILES_ROOT=$HOME/.dotfiles
 source "$DOTFILES_ROOT/ruby/funcs.zsh"

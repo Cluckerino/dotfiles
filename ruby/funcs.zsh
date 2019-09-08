@@ -18,6 +18,7 @@ gemdir() {
 # See: https://guides.rubygems.org/faqs/ about commands not being available
 gems2path() {
   if which ruby >/dev/null && which gem >/dev/null; then
-    export PATH="$(gemuserdir)/bin:$(gemdir)/bin:$PATH"
+    # Use zsh $path var to extend the linked $PATH var
+    path=("$(gemuserdir)/bin" "$(gemdir)/bin" $path)
   fi
 }
