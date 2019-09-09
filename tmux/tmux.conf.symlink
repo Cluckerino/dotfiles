@@ -15,6 +15,9 @@ bind-key C-m set-window-option mouse\; display-message "mouse mode is now #{?mou
 # Prefix + m to do the same thing 
 bind-key m set-window-option mouse\; display-message "mouse mode is now #{?mouse,on,off}"
 
+# Prefix + b to toggle pane syncing
+bind-key b setw synchronize-panes\; display-message "synchronize-panes is now #{?pane_synchronized,on,off}"
+
 # Enable vi mode in copy mode
 setw -g mode-keys vi
 
