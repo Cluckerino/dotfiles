@@ -12,6 +12,7 @@ brew "exiftool"
 brew "go"
 brew "jq"
 brew "maven"
+brew "mas"
 brew "mono", link: false
 brew "node"
 brew "python"
@@ -38,3 +39,7 @@ cask "slowquitapps"
 cask "visual-studio"
 cask "visual-studio-code"
 cask "vlc"
+
+mas "Slack", id: 803453959
+mas "Magnet", id: 441258766
+mas "Keka", id: 470158793
