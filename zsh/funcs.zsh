@@ -20,8 +20,13 @@ zshrcd() {
   fi
 
   # Load local zshrc stuff appended with "pre-".
-  # These need to load before my scripts (especially oh-my-zsh)
   for file in ${(M)local_config_files:#*/pre-*.zsh}
+  do
+    source $file
+  done
+
+  # Load local zshrc stuff not appended with pre.
+  for file in ${local_config_files:#*/pre-*.zsh}
   do
     source $file
   done
