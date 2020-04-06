@@ -56,8 +56,9 @@ git_status_color() {
 
 # Called for every prompt
 prompt_command() {
-    ps1_user_host='\[\e[33m\]\u@\h\[\e[m\]'
+    ps1_user_host='\[\e[30;33m\] \u@\h \[\e[m\]'
     ps1_dir='\[\e[30;44m\] \w \[\e[m\]'
+    ps1_time='\[\e[30;47m\] \t \[\e[m\]'
     ps1_git=`parse_git_branch`
     if [ ! "${ps1_git}" == "" ]; then
         git_status=`parse_git_status`
@@ -71,7 +72,7 @@ prompt_command() {
         ps1_git="[$ps1_git$git_status]"
         ps1_git="\[\e[$git_color\] $ps1_git \[\e[m\]"
     fi
-    export PS1="\n$ps1_user_host $ps1_dir $ps1_git\n\\$ "
+    export PS1="\n$ps1_user_host $ps1_dir $ps1_git $ps1_time\n\\$ "
 }
 
 PROMPT_COMMAND=prompt_command
