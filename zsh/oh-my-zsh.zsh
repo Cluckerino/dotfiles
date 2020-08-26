@@ -84,6 +84,7 @@ plugins=(
   pip
   python
   tmux
+  vi-mode
   vscode
   zsh-autosuggestions
   zsh-syntax-highlighting
