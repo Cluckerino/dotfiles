@@ -406,7 +406,7 @@
             },
             "Mouse Reporting": true,
             "Name": "Cluckerino's iTerm2 Defaults",
-            "Non Ascii Font": "HackNerdFontComplete-Regular 12",
+            "Non Ascii Font": "HackNF-Regular 12",
             "Non-ASCII Anti Aliased": true,
             "Non-ASCII Ligatures": false,
             "Normal Font": "Menlo-Regular 12",
