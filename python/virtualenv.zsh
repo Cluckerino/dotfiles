@@ -3,4 +3,5 @@
 # Consume the virtualenvwrapper.
 #
 
-source $VIRTUALENVWRAPPER_SCRIPT
+# Disable for now
+# source $VIRTUALENVWRAPPER_SCRIPT
