@@ -6,10 +6,15 @@
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# Install zsh addons as oh-my-zsh plugins
+# Install the Homebrew installed p10k as an Oh My Zsh custom theme.
+#
+# This is hacky, but since these are not omz supported plugins, I can't update them via the omz CLI.
+# I am unlikely to go into the custom dir and do a git pull, so I'd much rather manage it via Homebrew.
+echo "Symlinking the brew theme into oh-my-zsh"
+
 # Install Powerlevel10k
-git clone https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
-# Install zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-# Install zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+ln -s $(brew --prefix)/share/powerlevel10k ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+
+echo "Listing the Oh My Zsh custom theme directory"
+ls -la ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes
+
